@@ -32,9 +32,9 @@ function [res, solved, noSolutionFound] = solverec(board, emptyInd, ind, solved)
         return;
     end
     num = emptyInd(ind);
-    col = ceil(num / 9);
-    row = num - ((col - 1) * 9);
-    cd = getCandidates(board, row, col);
+    column = ceil(num / 9);
+    row = num - ((column - 1) * 9);
+    cd = getCandidates(board, row, column);
     ncd = numel(cd);
     if ncd == 0
         noSolutionFound = true;
